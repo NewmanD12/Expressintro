@@ -1,0 +1,20 @@
+{
+  "name": "expressintro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NewmanD12/Expressintro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NewmanD12/Expressintro/issues"
+  },
+  "homepage": "https://github.com/NewmanD12/Expressintro#readme"
+}
