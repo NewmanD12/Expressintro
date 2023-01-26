@@ -133,19 +133,27 @@ app.put('/update-movie/:titleToUpdate', (req, res) => {
     updatedMovie.lastModified = new Date()
     updatedMovie.createdAt = originalMovie.createdAt
 
-    // console.log(originalMovie)
-    // console.log(originalMovieIndex)
-
     favoriteMovieList[originalMovieIndex] = updatedMovie
 
     res.json({
         success: true,
         updatedMovie : updatedMovie
     })
-
 })
 
+app.delete('/delete-movie/:title', (req, res) => {
+    const movieToDelete = req.params.title
 
+    const indexOfMovie = favoriteMovieList.findIndex((movie) => {
+        return movie.title = movieToDelete
+    })
+
+    favoriteMovieList.splice(indexOfMovie, 1)
+
+    res.json({
+        success : true
+    })
+})
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
